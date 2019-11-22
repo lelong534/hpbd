@@ -12,13 +12,14 @@ p {
 </head>
 <body>
 
+<p id="content"></p> 
 <div class="demo">
 	<p id="demo"></p>
 </div>
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 24, 2019 00:00:00").getTime();
+var countDownDate = new Date("Nov 22, 2019 00:00:00").getTime();
 
 var color = ["#3498db", "#e74c3c", "#2ecc71" ,"#d35400", "yellow", "#9b59b6", "#ecf0f1", "#f39c12"];
 
@@ -48,6 +49,7 @@ var x = setInterval(function() {
     document.body.style.backgroundImage = "url('2.gif')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "100% 100%";
+    document.getElementById("content").innerHTML = "Hãy lấp đầy cuộc sống của bạn mỗi ngày bằng niềm vui và hạnh phúc. Mình luôn hy vọng những điều tốt đẹp nhất sẽ đến với bạn. Chúc mừng sinh nhật."
   }
 }, 1000);
 </script>
@@ -56,6 +58,9 @@ var x = setInterval(function() {
 </html>
 
 <style type="text/css">
+  body {
+    font-family: Roboto, sans-serif;
+  }
 	.demo {	
 		width: 100vw;
 		height: 100vh;
@@ -67,6 +72,10 @@ var x = setInterval(function() {
 		transform: translate(-50%, -50%);
 		font-weight: 600;
 	}
+  #content {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 	.progress {
 		display: absolute !important;
 		top: 20px;
