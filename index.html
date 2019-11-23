@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
 <style>
 p {
   text-align: center;
@@ -41,7 +42,10 @@ var x = setInterval(function() {
     
   // Output the result in an element with id="demo"
   document.getElementById("demo").innerHTML = hours + " : "+ minutes + " : " + seconds;
-  document.body.style.backgroundColor = color[seconds%8];
+  // document.body.style.backgroundColor = color[seconds%8];
+  document.body.style.backgroundImage = "url(" +seconds%8 + ".jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "100% 100%";
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -49,7 +53,7 @@ var x = setInterval(function() {
     document.body.style.backgroundImage = "url('2.gif')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "100% 100%";
-    document.getElementById("content").innerHTML = "Hãy lấp đầy cuộc sống của bạn mỗi ngày bằng niềm vui và hạnh phúc. Mình luôn hy vọng những điều tốt đẹp nhất sẽ đến với bạn. Chúc mừng sinh nhật."
+    document.getElementById("content").innerHTML = "Hãy lấp đầy cuộc sống của bạn mỗi ngày bằng niềm vui và hạnh phúc. Hy vọng những điều tốt đẹp nhất sẽ đến với bạn. Chúc mừng sinh nhật."
   }
 }, 1000);
 </script>
@@ -58,25 +62,27 @@ var x = setInterval(function() {
 </html>
 
 <style type="text/css">
-  body {
-    font-family: Comic Sans MS, sans-serif;
-  }
+  	body {
+    	font-family: 'Patrick Hand', cursive;
+  	}
 	.demo {	
 		width: 100vw;
 		height: 100vh;
+		color: #2d3436;
+		text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
 	}
 	#demo {
 		position: relative;
-		top: 50%;
+		top: 80%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-weight: 600;
 	}
-  #content {
-    padding: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
+    #content {
+        padding: 1rem;
+    	font-size: 1rem;
+    	line-height: 1.5;
+  	}
 	.progress {
 		display: absolute !important;
 		top: 20px;
